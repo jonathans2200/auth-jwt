@@ -10,7 +10,7 @@ import materiaRoutes from "./routes/materia.routes";
 
 const app = express();
 
-//SI SE CORRE LA PRIMA VEZ EJECUTAR ESTE COMANDOS una vez ejecutado comentar el import
+
 //create_roles();
 //crearMateria();
 //crearUsuario();
