@@ -25,6 +25,11 @@ router.put(
   [auth_jwt.verify_token, auth_jwt.is_admin],
   materiaCtrl.actualizarMateria
 );
+router.get(
+  "/obtenerMateria/:id",
+  [auth_jwt.verify_token, auth_jwt.is_admin],
+  materiaCtrl.obtenerMateriaId
+);
 router.delete(
   "/eliminarMateria/:id",
   [auth_jwt.verify_token, auth_jwt.is_admin],

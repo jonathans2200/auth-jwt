@@ -46,3 +46,20 @@ export const actualizarMateria = async (req, res) => {
     return res.status(500).json({ message: "Error actualizando la materia." });
   }
 };
+
+export const obtenerMateriaId = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const materia = await Materia.findById(id);
+
+    if (!materia) {
+      return res.status(404).json({ message: "Materia no encontrada." });
+    }
+
+    res.status(200).json(materia);
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ message: "Error obteniendo la materia." });
+  }
+};
