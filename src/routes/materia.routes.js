@@ -7,7 +7,7 @@ const router = Router();
 
 router.get(
   "/obtenerMaterias",
-  [auth_jwt.verify_token],
+  
   materiaCtrl.getMaterias
 );
 router.post(
